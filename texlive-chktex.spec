@@ -13,6 +13,7 @@ URL:		http://www.ctan.org/tex-archive/support/chktex
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chktex.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chktex.doc.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chktex.x86_64-linux.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(post):	texlive-tlpkg
@@ -43,6 +44,7 @@ parts of CWEB documents.
 
 #-----------------------------------------------------------------------
 %files
+%{_bindir}/chkweb
 %{_bindir}/deweb
 %{_texmfdir}/chktex/chktexrc
 %{_texmfdir}/scripts/chktex/deweb.pl
@@ -57,12 +59,14 @@ parts of CWEB documents.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%setup -c -a0 -a1 -a2
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
+# shell script
+cp -fa bin/x86_64-linux/chkweb %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
     ln -sf %{_texmfdir}/scripts/a2ping/deweb.pl deweb
 popd
