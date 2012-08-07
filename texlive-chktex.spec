@@ -1,12 +1,12 @@
-# revision 23089
+# revision 26693
 # category TLCore
 # catalog-ctan /support/chktex
-# catalog-date 2011-06-08 17:43:41 +0200
+# catalog-date 2012-04-08 14:01:59 +0200
 # catalog-license gpl
-# catalog-version 1.6.4
+# catalog-version 1.6.6
 Name:		texlive-chktex
-Version:	1.6.4
-Release:	2
+Version:	1.6.6
+Release:	1
 Summary:	Check for errors in LaTeX documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/chktex
