@@ -6,7 +6,7 @@
 # catalog-version 1.7.1
 Name:		texlive-chktex
 Version:	1.7.1
-Release:	2
+Release:	3
 Summary:	Check for errors in LaTeX documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/chktex
@@ -56,8 +56,8 @@ parts of CWEB documents.
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/chkweb/chkweb.sh chkweb
-    ln -sf %{_texmfdistdir}/scripts/chkweb/deweb.pl deweb
+    ln -sf %{_texmfdistdir}/scripts/chktex/chkweb.sh chkweb
+    ln -sf %{_texmfdistdir}/scripts/chktex/deweb.pl deweb
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
