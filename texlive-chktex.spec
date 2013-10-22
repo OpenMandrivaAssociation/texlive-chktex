@@ -6,14 +6,13 @@
 # catalog-version 1.7.1
 Name:		texlive-chktex
 Version:	1.7.1
-Release:	1
+Release:	2
 Summary:	Check for errors in LaTeX documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/chktex
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chktex.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chktex.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chktex.x86_64-linux.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -50,16 +49,15 @@ parts of CWEB documents.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a0 -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
-# shell script
-cp -fa bin/x86_64-linux/chkweb %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdir}/scripts/a2ping/deweb.pl deweb
+    ln -sf %{_texmfdistdir}/scripts/chkweb/chkweb.sh chkweb
+    ln -sf %{_texmfdistdir}/scripts/chkweb/deweb.pl deweb
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
