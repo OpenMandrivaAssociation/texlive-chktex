@@ -5,8 +5,8 @@
 # catalog-license gpl
 # catalog-version 1.7.2
 Name:		texlive-chktex
-Version:	1.7.2
-Release:	4
+Version:	1.7.6
+Release:	1
 Summary:	Check for errors in LaTeX documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/chktex
