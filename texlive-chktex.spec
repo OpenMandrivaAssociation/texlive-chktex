@@ -1,6 +1,6 @@
 Name:		texlive-chktex
-Version:	64797
-Release:	2
+Version:	69783
+Release:	1
 Summary:	Check for errors in LaTeX documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/chktex
