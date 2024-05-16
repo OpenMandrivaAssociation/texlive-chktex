@@ -1,5 +1,5 @@
 Name:		texlive-chktex
-Version:	69783
+Version:	71205
 Release:	1
 Summary:	Check for errors in LaTeX documents
 Group:		Publishing
